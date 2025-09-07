@@ -9,9 +9,13 @@ CUBE = {
 
 }
 
+POINT = {
+
+}
+
 DEBUG = {
     'CUBE': False,
     'POINT3D': False,
     'LINE3D': False,
-    'WINDOW': True
+    'WINDOW': False
 }

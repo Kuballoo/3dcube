@@ -1,5 +1,5 @@
 import pygame
-import window_manager
+import window_manager, renderer
 
 
 class Engine(object):
@@ -9,6 +9,7 @@ class Engine(object):
     def __init__(self):
         """Initialize the engine with a WindowManager and set running state."""
         self.window = window_manager.WindowManager()
+        self.renderer = renderer.Renderer(self.window.window)
         self.running = True
 
     # ========================
@@ -28,4 +29,4 @@ class Engine(object):
         while self.running:
             self.handle_events()
             self.window.update()   # FPS + input update
-            self.window.render()   # clear + flip screen
+            self.window.render()
